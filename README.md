@@ -7,15 +7,10 @@
 # Locklend  
 [![GitHub issues](https://img.shields.io/github/issues/locklend-development-team/Locklend.svg?style=for-the-badge)](https://github.com/locklend-development-team/Locklend/issues)  ![ver](https://img.shields.io/github/release/locklend-development-team/Locklend.svg?style=for-the-badge)  ![Discord](https://img.shields.io/discord/476074775589158913.svg?color=Blue&label=Discord&style=for-the-badge)
 
-A fun sandbox like game completely made in C#. It is a game made for the Windows, Mac OS, and Lynix.
-It is open soucre and may be modded / modified (EX: A MODDING API) with the proper credit to the origrinal creator and has been approved by the Locklend Development Team.
+A fun sandbox like game completely made in C#. This 2D sandbox game is more than you can think of with its infinte and random world generation with structures, caves, and more. It has a built in in game scripting and much more. It is a game made for the Windows, Mac OS, and Lynix.
 
 ### IMPORTANT LINKS
 - ###### WEBSITE: (Coming Soon)
-
-# Devlopers 
-
-The game is open soucre and may be modded / modified with the proper credit to the origrinal creator.
 
 ### Credit MUST Include 
 - A link to **THIS** git hub
