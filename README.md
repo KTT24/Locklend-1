@@ -12,8 +12,4 @@ A fun sandbox like game completely made in C#. This 2D sandbox game is more than
 ### IMPORTANT LINKS
 - ###### WEBSITE: (Coming Soon)
 
-### Credit MUST Include 
-- A link to **THIS** git hub
-- The name of the creator
-
 
