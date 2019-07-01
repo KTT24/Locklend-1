@@ -1,7 +1,7 @@
 # Locklend
 
 A fun sandbox like game completely made in C#. It is a game made for the Windows, Mac OS, and Lynix.
-The game is open soucre and may be modded / modified (EX: A MODDING API) with the proper credit to the origrinal creator and has been approved by the Locklend Development Team.
+It is open soucre and may be modded / modified (EX: A MODDING API) with the proper credit to the origrinal creator and has been approved by the Locklend Development Team.
 
 ###### WEBSITE: (Coming Soon)
 
