@@ -9,7 +9,7 @@ A fun sandbox like game completely made in C#. It is a game made for the Windows
 It is open soucre and may be modded / modified (EX: A MODDING API) with the proper credit to the origrinal creator and has been approved by the Locklend Development Team.
 
 ### IMPORTANT LINKS
-###### WEBSITE: (Coming Soon)
+- ###### WEBSITE: (Coming Soon)
 
 # Devlopers 
 
