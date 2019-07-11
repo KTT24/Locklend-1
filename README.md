@@ -11,5 +11,6 @@ A fun sandbox like game completely made in C#. This 2D sandbox game is more than
 
 ### IMPORTANT LINKS
 - ###### WEBSITE: (Coming Soon)
+- ###### WIKI: (Wiki)
 
 
