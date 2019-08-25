@@ -10,7 +10,7 @@
 A fun sandbox like game completely made in C#. This 2D sandbox game is more than you can think of with its infinte and random world generation with structures, caves, and more. It has a built in in game scripting and much more. It is a game made for the Windows, Mac OS, and Lynix.
 
 ### IMPORTANT LINKS
-- ###### WEBSITE: (Coming Soon)
+- ###### WEBSITE: (https://locklend.github.io/Locklend/)
 - ###### WIKI: (Wiki)
 
 
