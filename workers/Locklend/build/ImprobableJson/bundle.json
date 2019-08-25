@@ -1,0 +1,1154 @@
+{
+ "schemaFiles": [
+  {
+   "canonicalPath": "improbable/gdk/core/common.schema",
+   "package": {
+    "sourceReference": {
+     "line": 1,
+     "column": 1
+    },
+    "name": "improbable.gdk.core"
+   },
+   "imports": [],
+   "enums": [],
+   "types": [
+    {
+     "sourceReference": {
+      "line": 3,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.gdk.core.Empty",
+     "name": "Empty",
+     "outerType": "",
+     "fields": []
+    }
+   ],
+   "components": []
+  },
+  {
+   "canonicalPath": "improbable/restricted/system_components.schema",
+   "package": {
+    "sourceReference": {
+     "line": 1,
+     "column": 1
+    },
+    "name": "improbable.restricted"
+   },
+   "imports": [],
+   "enums": [
+    {
+     "sourceReference": {
+      "line": 22,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.Connection.ConnectionStatus",
+     "name": "ConnectionStatus",
+     "outerType": "improbable.restricted.Connection",
+     "values": [
+      {
+       "sourceReference": {
+        "line": 23,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "UNKNOWN",
+       "value": 0
+      },
+      {
+       "sourceReference": {
+        "line": 25,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "AWAITING_WORKER_CONNECTION",
+       "value": 1
+      },
+      {
+       "sourceReference": {
+        "line": 27,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "CONNECTED",
+       "value": 2
+      },
+      {
+       "sourceReference": {
+        "line": 29,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "DISCONNECTED",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "types": [
+    {
+     "sourceReference": {
+      "line": 21,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.Connection",
+     "name": "Connection",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 31,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "status",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "enum": "improbable.restricted.Connection.ConnectionStatus"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 39,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "data_latency_ms",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Uint32"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 42,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "connected_since_utc",
+       "fieldId": 3,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Uint64"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 46,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.DisconnectRequest",
+     "name": "DisconnectRequest",
+     "outerType": "",
+     "fields": []
+    },
+    {
+     "sourceReference": {
+      "line": 48,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.DisconnectResponse",
+     "name": "DisconnectResponse",
+     "outerType": "",
+     "fields": []
+    },
+    {
+     "sourceReference": {
+      "line": 63,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.PlayerIdentity",
+     "name": "PlayerIdentity",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 65,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "player_identifier",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "String"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 68,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "provider",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "String"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 73,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "metadata",
+       "fieldId": 3,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Bytes"
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "components": [
+    {
+     "sourceReference": {
+      "line": 16,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.System",
+     "name": "System",
+     "componentId": 59,
+     "dataDefinition": "",
+     "fields": [],
+     "events": [],
+     "commands": []
+    },
+    {
+     "sourceReference": {
+      "line": 53,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.Worker",
+     "name": "Worker",
+     "componentId": 60,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 55,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "worker_id",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "String"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 56,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "worker_type",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "String"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 57,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "connection",
+       "fieldId": 3,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.restricted.Connection"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": [
+      {
+       "sourceReference": {
+        "line": 53,
+        "column": 1
+       },
+       "annotations": [],
+       "name": "disconnect",
+       "requestType": "improbable.restricted.DisconnectRequest",
+       "responseType": "improbable.restricted.DisconnectResponse",
+       "commandIndex": 1
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 79,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.restricted.PlayerClient",
+     "name": "PlayerClient",
+     "componentId": 61,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 81,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "player_identity",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.restricted.PlayerIdentity"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": []
+    }
+   ]
+  },
+  {
+   "canonicalPath": "improbable/standard_library.schema",
+   "package": {
+    "sourceReference": {
+     "line": 1,
+     "column": 1
+    },
+    "name": "improbable"
+   },
+   "imports": [],
+   "enums": [],
+   "types": [
+    {
+     "sourceReference": {
+      "line": 6,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.WorkerAttributeSet",
+     "name": "WorkerAttributeSet",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 9,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "attribute",
+       "fieldId": 1,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "primitive": "String"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 24,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.WorkerRequirementSet",
+     "name": "WorkerRequirementSet",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 28,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "attribute_set",
+       "fieldId": 1,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "type": "improbable.WorkerAttributeSet"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 62,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.Coordinates",
+     "name": "Coordinates",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 63,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "x",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 64,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "y",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 65,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "z",
+       "fieldId": 3,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 69,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.EdgeLength",
+     "name": "EdgeLength",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 70,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "x",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 71,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "y",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 72,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "z",
+       "fieldId": 3,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 103,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest",
+     "name": "ComponentInterest",
+     "outerType": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 171,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "queries",
+       "fieldId": 1,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.Query"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 104,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.Query",
+     "name": "Query",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 105,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "constraint",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.ComponentInterest.QueryConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 108,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "full_snapshot_result",
+       "fieldId": 2,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "primitive": "Bool"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 109,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "result_component_id",
+       "fieldId": 3,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "primitive": "Uint32"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 126,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "frequency",
+       "fieldId": 4,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "primitive": "Float"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 129,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.QueryConstraint",
+     "name": "QueryConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 132,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "sphere_constraint",
+       "fieldId": 1,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.SphereConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 133,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "cylinder_constraint",
+       "fieldId": 2,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.CylinderConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 134,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "box_constraint",
+       "fieldId": 3,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.BoxConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 135,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "relative_sphere_constraint",
+       "fieldId": 4,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.RelativeSphereConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 136,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "relative_cylinder_constraint",
+       "fieldId": 5,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.RelativeCylinderConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 137,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "relative_box_constraint",
+       "fieldId": 6,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.RelativeBoxConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 138,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "entity_id_constraint",
+       "fieldId": 7,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "primitive": "Int64"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 139,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "component_constraint",
+       "fieldId": 8,
+       "transient": false,
+       "optionType": {
+        "innerType": {
+         "primitive": "Uint32"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 140,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "and_constraint",
+       "fieldId": 9,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.QueryConstraint"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 141,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "or_constraint",
+       "fieldId": 10,
+       "transient": false,
+       "listType": {
+        "innerType": {
+         "type": "improbable.ComponentInterest.QueryConstraint"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 144,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.SphereConstraint",
+     "name": "SphereConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 145,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "center",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.Coordinates"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 146,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "radius",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 149,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.CylinderConstraint",
+     "name": "CylinderConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 150,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "center",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.Coordinates"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 151,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "radius",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 154,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.BoxConstraint",
+     "name": "BoxConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 155,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "center",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.Coordinates"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 156,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "edge_length",
+       "fieldId": 2,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.EdgeLength"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 159,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.RelativeSphereConstraint",
+     "name": "RelativeSphereConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 160,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "radius",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 163,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.RelativeCylinderConstraint",
+     "name": "RelativeCylinderConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 164,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "radius",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "Double"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "sourceReference": {
+      "line": 167,
+      "column": 3
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.ComponentInterest.RelativeBoxConstraint",
+     "name": "RelativeBoxConstraint",
+     "outerType": "improbable.ComponentInterest",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 168,
+        "column": 5
+       },
+       "annotations": [],
+       "name": "edge_length",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.EdgeLength"
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "components": [
+    {
+     "sourceReference": {
+      "line": 33,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.EntityAcl",
+     "name": "EntityAcl",
+     "componentId": 50,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 40,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "read_acl",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.WorkerRequirementSet"
+        }
+       }
+      },
+      {
+       "sourceReference": {
+        "line": 46,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "component_write_acl",
+       "fieldId": 2,
+       "transient": false,
+       "mapType": {
+        "keyType": {
+         "primitive": "Uint32"
+        },
+        "valueType": {
+         "type": "improbable.WorkerRequirementSet"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": []
+    },
+    {
+     "sourceReference": {
+      "line": 51,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.Metadata",
+     "name": "Metadata",
+     "componentId": 53,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 57,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "entity_type",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "primitive": "String"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": []
+    },
+    {
+     "sourceReference": {
+      "line": 81,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.Position",
+     "name": "Position",
+     "componentId": 54,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 83,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "coords",
+       "fieldId": 1,
+       "transient": false,
+       "singularType": {
+        "type": {
+         "type": "improbable.Coordinates"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": []
+    },
+    {
+     "sourceReference": {
+      "line": 89,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.Persistence",
+     "name": "Persistence",
+     "componentId": 55,
+     "dataDefinition": "",
+     "fields": [],
+     "events": [],
+     "commands": []
+    },
+    {
+     "sourceReference": {
+      "line": 98,
+      "column": 1
+     },
+     "annotations": [],
+     "qualifiedName": "improbable.Interest",
+     "name": "Interest",
+     "componentId": 58,
+     "dataDefinition": "",
+     "fields": [
+      {
+       "sourceReference": {
+        "line": 100,
+        "column": 3
+       },
+       "annotations": [],
+       "name": "component_interest",
+       "fieldId": 1,
+       "transient": false,
+       "mapType": {
+        "keyType": {
+         "primitive": "Uint32"
+        },
+        "valueType": {
+         "type": "improbable.ComponentInterest"
+        }
+       }
+      }
+     ],
+     "events": [],
+     "commands": []
+    }
+   ]
+  }
+ ]
+}
