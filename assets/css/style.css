@@ -1,7 +1,7 @@
 ---
 ---
 
-@import 'jekyll-theme-cayman';
+@import "{{ site.theme }}";
 #navbar {
   overflow: hidden;
   background-color: rgba(0,0,0,0.5);
