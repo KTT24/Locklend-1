@@ -25,10 +25,10 @@
 }
 
 .page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #0099ff;
-  background-image: linear-gradient(120deg, #0099ff, #fff);
+background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .project-name {
