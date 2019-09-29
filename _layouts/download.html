@@ -102,20 +102,18 @@ background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, F
   <body>
 
       <div id="navbar">
-            <a class="active" href="#">Home</a>
-            <a href="_layouts/dowload.html">Dowload</a>
+            <a href="_layouts/default.html">Home</a>
+            <a class="active" href="_layouts/dowload.html">Dowload</a>
             <a href="#">Fourms</a>
             <a href="#">Store</a>
       </div>
     <header class="page-header" role="banner">
 
-      <img src="https://i.imgur.com/O64zude.png" width="100%" height="50%"></IMG>
+      <img src="https://i.imgur.com/Bg54i44.png" width="100%" height="50%"></IMG>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
       {% endif %}
       {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download Locklend</a>
-
       {% endif %}
     </header>
 
