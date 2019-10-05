@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/0af401707c.js" crossorigin="anonymous"></script>
+<style>
+  #navbar {
+  overflow: hidden;
+  background-color: #333333;
+  filter: blur(0px);\
+  font: monospace;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font: monospace;
+
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+
+}
+
+#navbar a.active {
+  border-bottom: 3px solid #0099ff;
+  color: white;
+  background-color: transparent;
+
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+.btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .btn {
+    margin-left: 1rem;
+  }
+}
+
+.page-header {
+background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.project-name {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+}
+
+.main-content {
+  word-wrap: break-word;
+
+  :first-child {
+    margin-top: 0;
+  }
+}
+
+.border {
+    border-radius: 50%;
+}
+
+.icon
+{
+    text-align: center;
+}
+</style>
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+
+      <div id="navbar">
+            <a class="active" href="#">Home</a>
+            <a href="locklend/_layouts/download.html">Download</a>
+            <a href="#">Fourms</a>
+            <a href="#">Store</a>
+      </div>
+    <header class="page-header" role="banner">
+
+      <img src="https://i.imgur.com/O64zude.png" width="100%" height="50%"></IMG>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download Locklend</a>
+
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+        <i class="fas fa-gamepad"></i>
+        <div class="fun">
+            <H1>Fun</H1>
+        </div>
+
+        <i class="fas fa-user-lock"></i>
+        <div class="secure">
+            <h1>Secure</h1>
+        </div>
+
+        <h1 class="icon">Our Team</h1>
+        <div class="person">
+            <div class="icon">
+            <img class="border" src="https://avatars.io/gravatar/kutter.thornton@gmail.com" alt="kutter" height="128" width="128">
+                <h3>Kutter Thornton</h3>
+                <p>Lead Devloper</p>
+            </div>
+        </div>
+
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+      </footer>
+    </main>
+  </body>
+</html>
+
